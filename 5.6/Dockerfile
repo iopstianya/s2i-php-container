@@ -69,7 +69,7 @@ COPY ./s2i/bin/ $STI_SCRIPTS_PATH
 
 # Copy extra files to the image.
 COPY ./root/ /
-
+COPY ./swoole_loader55.so /opt/rh/rh-php56/root/usr/lib64/php/modules/
 # Reset permissions of filesystem to default values
 RUN /usr/libexec/container-setup && rpm-file-permissions
 
